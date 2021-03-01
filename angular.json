@@ -6,7 +6,7 @@
     "custom-element": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "projects/elements/",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -26,7 +26,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              //{
+              // This is needed for the elements to get registered properly
+              // Note that the "ng add" command adds this automatically
+              // "input": "node_modules/document-register-element/build/document-register-element.js"
+              //}
+            ]
           },
           "configurations": {
             "production": {
@@ -37,7 +43,8 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              // No hashing makes the file names easy to concatenate
+              "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,

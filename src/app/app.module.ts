@@ -15,10 +15,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   bootstrap: [AppComponent]
+  //entryComponents: [
+  //  AnalyticsCounterComponent
+ // ]
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const myElement = createCustomElement(AppComponent, { injector });
+    const myElement = createCustomElement(AppComponent, { injector: this.injector });
     customElements.define('popup-element', myElement);
   }
   ngDoBootstrap() {}

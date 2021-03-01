@@ -18,3 +18,9 @@ I took this js in different hosted site, and inject belwo in html body of some d
 
 Ref: https://medium.com/@kitson.mac/wrapping-an-angular-app-in-a-custom-element-web-component-angular-element-in-4-simple-steps-ded3554e9006 
 
+Element related development changes are in
+1. app.module.ts
+2. angular.json
+3. package.json
+
+https://www.techiediaries.com/angular/angular-9-elements-web-components/
